@@ -1,77 +1,56 @@
 # 🎬 Razan Cinema Booking (Python Project)
 
 ## Description
-A beginner-friendly Python project that simulates a cinema booking system. 
-The user selects a day, chooses a movie from that day's schedule, and views full details 
-(type, price, showtime) before confirming the booking. All movie data is stored in nested 
-dictionaries and lists.
+A beginner-friendly Python cinema booking system with two versions:
+- **v1** (`Movie_ticket.py`): Basic version without loops.
+- **v2** (`cinema_booking_v2.py`): Advanced version with loops, nested dictionaries, 
+  discounts, and multiple bookings per session.
 
-This is my fifth Python project, part of my learning journey toward robotics and AI.
-
-## Features
-- Displays available movies for each day of the week
-- Uses nested dictionaries to store movies, details, and showtimes
-- Validates the user's chosen day with `in`
-- Lets the user pick a movie by number (1–3)
-- Shows full movie details: type, price, and showtime
-- Asks for booking confirmation (yes/no)
-- Cleans user input with `.strip().title()` and `.strip().lower()`
-
-## Example Run
-```
-
-==============================
-🎬 WELCOME TO RAZAN CINEMA 🎬
-==============================
-
-Please choose a day: sunday
-
-Here is Sunday movies
-
-1. The Godfather.
-2. Avatar.
-3. Oppenheimer.
-
-==================================================
-Which movie you want to watch (1-3)? 2
-
-This is your movie details:
+This project is part of my Python learning journey toward robotics and AI.
 
 ---
 
-Movie type is: 3D - Sci-Fi, Adventure
+## 📌 Versions
 
-Ticket price is: $12
+### v1 — `Movie_ticket.py`
+- Week-long movie schedule (dictionaries of lists)
+- Day selection with `in` validation
+- Movie selection by number
+- Booking confirmation (single ticket)
 
-Movie show time is: 5:00 PM
+### v2 — `cinema_booking_v2.py` (Advanced)
+- Everything in v1
+- **`while True`** loop for multiple bookings in one session
+- **`for` loop** for displaying numbered movie lists
+- **`.items()`** to display movie details dynamically
+- **Membership discount** (10%)
+- **Student discount** (20%)
+- **List of Dictionaries** to store all bookings
+- Displays all confirmed bookings at the end
+- Full ticket formatting with separators
 
-==================================================
+---
 
-Do you want to confirm your booking (yes/no)? yes
-Your booking is confirmed!!
-
-```
+## Features
+- Display weekly movie schedule
+- Choose day and movie interactively
+- View movie details (type, price, showtime)
+- Apply membership and student discounts
+- Confirm or cancel bookings
+- Book multiple tickets in one session
+- Review all confirmed bookings at the end
 
 ## Concepts Practiced
-- Dictionaries (simple + nested)
-- Dictionary of Lists
-- Accessing nested data with multiple keys
-- `in` operator for validation
-- `if / elif / else` for decision making
-- String methods: `.strip()`, `.title()`, `.lower()`
-- Type conversion with `int()`
-- f-strings for formatted output
-- User input handling
-- Booking confirmation logic
+- Nested dictionaries and dictionary of lists
+- `while` loops with `break` and `continue`
+- `for` loops (simple + nested)
+- Advanced dictionary iteration with `.items()`
+- Lists of dictionaries
+- Boolean logic and comparisons
+- String methods: `.strip()`, `.title()`, `.lower()`, `.center()`
+- f-strings with formatting (`.2f`)
+- Conditional discounts (cumulative)
 
-## How to Run
-```bash
-python cinema_booking.py
-```
 
-Author
-
-Razan — Learning Python step by step, aiming for robotics and AI 🦿
-GitHub: @razansalih-hub
-
-```
+# Run v2
+python cinema_booking_v2.py
